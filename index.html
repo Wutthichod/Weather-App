@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">Weather Forecast Project by Wutthichod</h1>
+    </header>
+    <section class="majorCitySection">
+    </section>
+    <section class="yourCitySection">
+        <form class="weatherForm">
+            <input type="text" class="cityNameInput" placeholder="Enter Your City">
+            <input type="submit" class="submitCityNameBtn" title="Submit">
+        </form>
+        <div id="yourInfoCard" style="display: none;">
+            <div class="cityNameElement" id="yourCityNameElement"></div>
+            <div class="cityTempElement" id="yourCityTempEleent"></div>
+            <div class="cityHumidElement" id="yourCityHumidElement"></div>
+            <div class="iconElement" id="yourIconElement"></div>
+        </div>
+        <div class="errorElement"></div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

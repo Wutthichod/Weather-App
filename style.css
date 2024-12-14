@@ -1,0 +1,133 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'JetBrians Mono', monospace;
+    color: white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: rgb(25, 7, 61);
+}
+
+.header {
+    margin: 2rem;
+    margin-bottom: 0;
+    color: white;
+}
+
+.majorCitySection {
+    position: relative;
+    width: 80vw;
+    height: 200px;
+    gap: 0.5rem;
+    margin: 5rem;
+    margin-bottom: 0;
+    mask-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1) 10%,
+        rgba(0, 0, 0, 1) 90%,
+        rgba(0, 0, 0, 0)
+    );
+}
+
+.majorCitySection::-webkit-scrollbar {
+    display: none;
+}
+
+.infoCard {
+    --animation-duration: 20s;
+    --animation-delay: 0s;
+
+    position: absolute;
+    left: 100%;
+    width: 150px;
+    height: 180px;
+    padding: 1rem;
+    margin: 1rem;
+    background: rgb(59,30,118);
+    background: linear-gradient(339deg, rgba(59,30,118,1) 7%, rgba(43,30,118,1) 25%, rgba(30,42,118,1) 50%, rgba(28, 44, 110, 0.397) 75%, rgba(21, 40, 93, 0.479) 100%);      color: white;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    transition: all 200ms ease-in-out;
+    transform-origin: center;
+    animation: scrollLeft var(--animation-duration) linear infinite;
+    animation-delay: var(--animation-delay);
+}
+
+@keyframes scrollLeft {
+    to {
+        left: -300px;
+    }
+}
+
+.infoCard:hover, #yourInfoCard:hover{
+    transform: scale(1.1, 1.1);
+    z-index: 100;
+}
+
+.yourCitySection {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 40vw;
+    height: 250px;
+    padding: 1rem;
+    margin: 2rem;
+}
+
+.weatherForm {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.cityNameInput {
+    width: 300px;
+    height: 50px;
+    border: 0.2rem solid black;
+    margin-top: 1rem;
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+    color: black;
+}
+
+
+.submitCityNameBtn {
+    width: 80px;
+    height: 50px;
+    border: 0.2rem solid black;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    background-color: white;
+    color: black;
+    transition: all 150ms ease-in-out;
+}
+
+.submitCityNameBtn:hover {
+    background-color: darkgray;
+}
+
+#yourInfoCard {
+    width: 150px;
+    height: 200px;
+    padding: 1rem;
+    margin: 1rem;
+    background: rgb(59,30,118);
+    background: linear-gradient(339deg, rgba(59,30,118,1) 7%, rgba(43,30,118,1) 25%, rgba(30,42,118,1) 50%, rgba(28, 44, 110, 0.397) 75%, rgba(21, 40, 93, 0.479) 100%);      color: white;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    transition: all 200ms ease-in-out;
+    transform-origin: center;
+}
+
+.errorElement {
+    padding: 2rem;
+}
+
+
+
